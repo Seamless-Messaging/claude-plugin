@@ -1,0 +1,23 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "seamless-messaging",
+  "version": "0.1.0",
+  "description": "Search conversations, read CRM context and draft or send WhatsApp, Telegram and SMS messages from your Seamless Messaging workspaces.",
+  "author": {
+    "name": "Seamless Automation",
+    "url": "https://seamless-messaging.eu"
+  },
+  "homepage": "https://seamless-messaging.eu",
+  "license": "MIT",
+  "keywords": [
+    "whatsapp",
+    "telegram",
+    "sms",
+    "pipedrive",
+    "crm",
+    "messaging",
+    "inbox"
+  ],
+  "privacyPolicyUrl": "https://seamless-messaging.eu/en/legal/privacy",
+  "icon": "./.claude-plugin/icon.png"
+}

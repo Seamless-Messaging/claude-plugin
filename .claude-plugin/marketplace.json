@@ -1,0 +1,19 @@
+{
+  "name": "seamless-messaging",
+  "owner": {
+    "name": "Seamless Automation",
+    "url": "https://seamless-messaging.eu"
+  },
+  "metadata": {
+    "description": "Official Claude plugins for Seamless Messaging - WhatsApp, Telegram and SMS inside Pipedrive."
+  },
+  "plugins": [
+    {
+      "name": "seamless-messaging",
+      "source": "./plugins/seamless-messaging",
+      "description": "Search conversations, read CRM context and draft or send WhatsApp, Telegram and SMS messages from your Seamless Messaging workspaces.",
+      "category": "productivity",
+      "homepage": "https://seamless-messaging.eu"
+    }
+  ]
+}

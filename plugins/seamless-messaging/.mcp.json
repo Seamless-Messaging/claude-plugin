@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "seamless-messaging": {
+      "type": "http",
+      "url": "https://seamless-messaging.eu/mcp"
+    }
+  }
+}
