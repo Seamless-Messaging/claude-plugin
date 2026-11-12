@@ -15,6 +15,8 @@ Supported channels: WhatsApp, Telegram and SMS (Twilio).
 
 ## Install
 
+Full step-by-step guide: [Connect Claude](https://seamless-messaging.eu/docs/en/claude) ([en español](https://seamless-messaging.eu/docs/es/claude)).
+
 ### Claude Code
 
 Run these in Claude Code:
@@ -56,4 +58,5 @@ Privacy policy: https://seamless-messaging.eu/en/legal/privacy
 
 ## Support
 
-https://seamless-messaging.eu
+- Documentation: https://seamless-messaging.eu/docs/en/claude
+- Website: https://seamless-messaging.eu
