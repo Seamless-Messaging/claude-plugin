@@ -1,6 +1,6 @@
 # Seamless Messaging
 
-Work with your [Seamless Messaging](https://seamless-messaging.eu) team inbox from Claude. Search WhatsApp, Telegram and SMS conversations, read the Pipedrive context of a customer, and prepare replies that you review before anything is sent.
+Work with your [Seamless Messaging](https://seamless-messaging.eu) team inbox from Claude. Search WhatsApp, Telegram and SMS conversations, open the photos, documents and voice notes customers send, read the Pipedrive context of a customer, and prepare replies that you review before anything is sent.
 
 ## Install in Claude Code
 
