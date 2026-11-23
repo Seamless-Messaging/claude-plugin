@@ -1,6 +1,6 @@
 # Seamless Messaging for Claude
 
-Use your [Seamless Messaging](https://seamless-messaging.eu) Inbox from Claude: list and search WhatsApp, Telegram and SMS conversations with the Inbox filters and your saved views, open the photos, documents and voice notes customers send, read the Pipedrive context, reports and logs, see where you were mentioned or what was assigned to you, keep notes, labels and templates tidy, and draft replies that you approve before they are sent.
+Use your [Seamless Messaging](https://seamless-messaging.eu) Inbox from Claude: list and search WhatsApp, Telegram and SMS conversations with the Inbox filters and your saved views, open the photos, documents and voice notes customers send, read the Pipedrive context, reports and logs, see where you were mentioned or what was assigned to you, block senders who should not reach your team, keep notes, labels and templates tidy, and draft replies that you approve before they are sent.
 
 ## What's inside
 
