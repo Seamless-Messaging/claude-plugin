@@ -1,6 +1,6 @@
 ---
 name: messaging-basics
-description: Rules for working with Seamless Messaging tools (WhatsApp, Telegram, SMS and Pipedrive context). Use whenever the user asks to look up, read, search, draft, edit, schedule or send a customer message, open a photo, document or voice note a client sent, attach a file to a message, check reports, logs, the team or connected accounts, add notes or labels, manage templates, the knowledge base or webhooks, check who said what to a client, list their WhatsApp or Telegram groups, or pick which number or account to send from.
+description: Rules for working with Seamless Messaging tools (WhatsApp, Telegram, SMS and Pipedrive context). Use whenever the user asks to look up, read, search, draft, edit, schedule or send a customer message, open a photo, document or voice note a client sent, attach a file to a message, check reports, logs, the team or connected accounts, add notes or labels, manage templates, the knowledge base or webhooks, check who said what to a client, check where they were mentioned or what was assigned to them, change their own notification choices, list their WhatsApp or Telegram groups, or pick which number or account to send from.
 ---
 
 # Working with Seamless Messaging
@@ -44,6 +44,11 @@ Seamless Messaging connects a team's WhatsApp, Telegram and SMS (Twilio) account
 - Templates: `list_templates`, `render_template` (fills the merge fields for a conversation, then use the text in `create_draft`), `create_template`, `update_template`, `delete_template`.
 - Knowledge base (owners/admins): `add_knowledge_base_text`, `add_knowledge_base_file`, `delete_knowledge_base_document`.
 - These change shared team data, so say what you are about to change and ask first unless the user asked for that exact change.
+
+## Your mentions, assignments and notification choices
+
+- `list_my_notifications`: the signed-in member's unread mentions (a teammate mentioned them in an internal note) and assignments, newest first, with `conversationKey` and, for a mention, `noteId`. Open one with `get_conversation`. `enabled: false` means the workspace does not use team notifications (yet).
+- `get_notification_preferences` and `update_notification_preferences`: the member's own choices, `mentions` and `assignments`, each with `push` (device notifications) and `inbox` (the count in the Inbox). Pass only what changes, e.g. `{"mentions": {"push": false}}`. These change only the user's own settings; nobody else's can be changed.
 
 ## Workspace administration (owners and admins)
 
