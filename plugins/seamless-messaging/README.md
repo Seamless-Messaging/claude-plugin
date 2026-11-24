@@ -17,6 +17,7 @@ Then run `/mcp`, choose `seamless-messaging`, select **Authenticate** and sign i
 - **`messaging-basics` skill**: how Claude picks the workspace and the sending number, and the draft, review, confirm, send flow.
 - **`reply-to-customer` skill**: finds the conversation, reads the history and CRM context, and drafts a reply in the customer's language.
 - **`customer-brief` skill**: a read-only summary of a customer before a call, with the deal, recent messages, open items and a suggested next step.
+- **`automation-rules` skill** (owners and admins): read, create, change, switch on or off and delete automation rules (away message, welcome, text back after a missed call, round robin, keyword to label) and edit business hours. Every change is previewed and confirmed, and new rules start switched off.
 
 ## How sending works
 

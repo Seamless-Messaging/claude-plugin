@@ -1,6 +1,6 @@
 # Seamless Messaging for Claude
 
-Use your [Seamless Messaging](https://seamless-messaging.eu) Inbox from Claude: list and search WhatsApp, Telegram and SMS conversations with the Inbox filters and your saved views, open the photos, documents and voice notes customers send, read the Pipedrive context, reports and logs, see where you were mentioned or what was assigned to you, work through your team's queue and hand conversations to a team, block senders who should not reach your team, keep notes, labels and templates tidy (with template categories), and draft replies that you approve before they are sent.
+Use your [Seamless Messaging](https://seamless-messaging.eu) Inbox from Claude: list and search WhatsApp, Telegram and SMS conversations with the Inbox filters and your saved views, open the photos, documents and voice notes customers send, read the Pipedrive context, reports and logs, see where you were mentioned or what was assigned to you, work through your team's queue and hand conversations to a team, block senders who should not reach your team, keep notes, labels and templates tidy (with template categories), set up automation rules such as away messages and business hours, and draft replies that you approve before they are sent.
 
 ## What's inside
 
@@ -10,6 +10,7 @@ Use your [Seamless Messaging](https://seamless-messaging.eu) Inbox from Claude: 
 | `messaging-basics` skill | Rules Claude follows: workspace and sender selection, and draft → show → confirm → send. |
 | `reply-to-customer` skill | Finds the conversation, reads history and CRM context, and drafts a reply in the customer's language. |
 | `customer-brief` skill | Read-only summary of a customer before a call: deal, recent messages, open items, next step. |
+| `automation-rules` skill | For owners and admins: reads, creates and changes automation rules and business hours, always previewed and confirmed; new rules start switched off. |
 
 Supported channels: WhatsApp, Telegram and SMS (Twilio).
 
