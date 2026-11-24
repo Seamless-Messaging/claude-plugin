@@ -1,6 +1,6 @@
 ---
 name: automation-rules
-description: Read, create, change, switch on or off and delete Seamless Messaging automation rules (away messages, welcome messages, text back after a missed call, round robin, keyword to label) and edit business hours. Use when the user asks "set up an away message", "auto-reply outside office hours", "what rules do we have", "why did this rule stop", "show the run log", "change our opening hours".
+description: Read, create, change, switch on or off and delete Seamless Messaging automation rules (away messages, welcome messages, round robin, keyword to label) and edit business hours. Use when the user asks "set up an away message", "auto-reply outside office hours", "what rules do we have", "why did this rule stop", "show the run log", "change our opening hours".
 argument-hint: "[what the rule should do, or which rule]"
 ---
 
@@ -18,7 +18,7 @@ Follow the `messaging-basics` skill for workspaces. These tools are for workspac
 
 A rule is a trigger plus steps.
 
-- **Trigger**: `{"type":"message_received","on":"any"}` (`on` can also be `new_conversation` or `after_closed`) or `{"type":"call_missed"}`. Group chats are skipped unless `"includeGroups": true`.
+- **Trigger**: `{"type":"message_received","on":"any"}` (`on` can also be `new_conversation` or `after_closed`) or `{"type":"call_missed"}` (only fires in workspaces where calling is on; offer it only when the user asks for missed calls). Group chats are skipped unless `"includeGroups": true`.
 - **Steps** run in order. An action: `{"type":"action","action":{"kind":"send_reply","text":"..."}}`. A wait: `{"type":"wait","minutes":30}` (1 minute to 30 days; cancelled when the contact writes again or a team member replies). A condition: `{"type":"condition","match":"all","checks":[{"field":"business_hours","value":"outside"}],"yes":[...],"no":[...]}`. A condition is always the last step of its list; each branch continues on its own.
 - **Actions**: `send_reply` (`text`, or `templateId` of a shared template; `limitHours` 1 to 168, default 12: at most one reply from that step per conversation in that time), `assign_member` (`userId` from `list_team`), `assign_team` (`teamId` from `list_teams`, `roundRobin`), `add_label` and `remove_label` (`labelId` from `list_labels`), `add_note` (`text`), `notify` (`userIds` and/or `teamId`), `close_conversation`, `create_crm_person`, `create_crm_container` (optional `title`), `webhook` (`url` on https, `includeContent`).
 - **Checks**: `account` (`numberIds`), `channel` (`channels`), `business_hours` (`inside` or `outside`), `message_contains` (`words`, whole words or phrases, any case), `contact` (`new` or `known`), `crm_linked`, `assigned` (`true` or `false`), `team` (`teamIds`), `label` (`labelIds`), `phone_country` (`countries`, ISO codes such as `ES`). Up to 5 checks, joined by `all` or `any`.
