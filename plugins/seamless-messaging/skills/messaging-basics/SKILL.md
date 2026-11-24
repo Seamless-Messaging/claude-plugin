@@ -46,6 +46,8 @@ Seamless Messaging connects a team's WhatsApp, Telegram and SMS (Twilio) account
 - `add_internal_note` writes a team-only note; customers never see it. `add_crm_note` writes a note in Pipedrive.
 - `add_conversation_label` (by `labelId` or a new `label` name), `remove_conversation_label`, `set_conversation_status` (`open`/`closed`), `assign_conversation` (members can only take a conversation themselves). Owners and admins can also pass `teamId` (from `list_teams`, `null` removes the team; the person stays) and `pickNext: true` (assigns the team's next member in turn who can see the conversation); a person outside the team may still be assigned.
 - Templates: `list_templates`, `render_template` (fills the merge fields for a conversation, then use the text in `create_draft`), `create_template`, `update_template`, `delete_template`.
+- `list_templates` returns each template's optional `category`, whether the member pinned it (`pinned`) and when they last used it (`lastUsedAt`), in the order the app shows: pinned, recently used, then A to Z. Suggest the pinned and recent ones first when the user asks for "my usual" template.
+- `create_template` and `update_template` accept `category` (1 to 40 characters, for example `Billing`; `null` on update clears it). An existing category with the same name in another case is reused. To rename a category, update it on each of its templates. Pinning is done in the app (the star in the template menu).
 - Knowledge base (owners/admins): `add_knowledge_base_text`, `add_knowledge_base_file`, `delete_knowledge_base_document`.
 - These change shared team data, so say what you are about to change and ask first unless the user asked for that exact change.
 
